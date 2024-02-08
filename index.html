@@ -10,8 +10,19 @@
 
 <body>
   <div class="container">
-    <h1>Calorie Calculator 2</h1>
+    <h1>Input</h1>
     <form id="calorieForm">
+      <h2>About your body</h2>
+      <!-- Add Gender Selection Here -->
+      <div class="form-row">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
       <div class="form-row">
         <label for="age">Age:</label>
         <input type="number" id="age" placeholder="Age" name="Age" required>
@@ -24,18 +35,15 @@
         <label for="height">Height (cm):</label>
         <input type="number" id="height" placeholder="Height" name="Height" required>
       </div>
+
       <div class="form-row">
-        <label for="gender">Gender:</label>
-        <select id="gender" name="Gender" required>
-          <option value="" disabled selected>Select...</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-      </div>
-      <div class="form-row">
-        <label for="bodyFat">Body Fat (%):</label>
+        <label for="bodyFat">Body Fat (%): <span class="info-icon"
+            title="Optional: Helps in calculating more accurate BMR if known.">?</span></label>
         <input type="number" id="bodyFat" placeholder="Body Fat Percentage (optional)" step="0.01" min="0" max="100">
       </div>
+
+
+      <h2>About your lifestyle</h2>
       <div class="form-row">
         <label for="activityLevel">Activity Level:</label>
         <select id="activityLevel" required>
@@ -58,6 +66,8 @@
           <option value="0.4">Very Hard: daily or intense sessions 5-6 days/week</option>
         </select>
       </div>
+
+      <h2>About your goals</h2>
       <div class="form-row">
         <label for="goal">Your Goal:</label>
         <select id="goal" required>
@@ -73,33 +83,12 @@
       </div>
       <button type="submit">Calculate</button>
     </form>
-    <div id="result"></div>
+    <div class="results-container" id="results-container" style="display:none;">
+      <h2>Results</h2>
+      <div id="result"></div>
+    </div>
   </div>
-  <p>Results</p>
   <script src="scripts.js"></script>
 </body>
 
 </html>
-
-
-
-<!--
-
-<option value="" disabled selected>Daily Lifestyle Activity</option>
-        <option value="1.2">Sedentary: little or no movement, desk job</option>
-        <option value="1.375">Lightly active: light daily walking or physical activity</option>
-        <option value="1.55">Moderately active: constant movement during the day, retail jobs</option>
-        <option value="1.725">Very active: physically demanding jobs, active throughout the day</option>
-        <option value="1.9">Extra active: very physically demanding work and active lifestyle</option>
-      </select>
-
-<select id="workoutIntensity" required>
-  <option value="" disabled selected>Workout Intensity</option>
-  <option value="0">No workouts</option>
-  <option value="0.1">Light: 1-2 days/week</option>
-  <option value="0.2">Moderate: 3-4 days/week</option>
-  <option value="0.3">Hard: 5-6 days/week</option>
-  <option value="0.4">Very Hard: daily or intense sessions 5-6 days/week</option>
-
-
-  -->
