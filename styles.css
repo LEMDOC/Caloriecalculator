@@ -20,7 +20,11 @@ body {
   max-width: 600px;
 }
 
-h1,
+h1 {
+  color: #0056b3;
+  text-align: center;
+}
+
 h2 {
   color: #333;
   text-align: center;
@@ -53,10 +57,20 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+.calculate {
+  position: relative;
+}
+
+.sec1 {
+  border: #333;
+
 }
 
 .info-icon {
@@ -75,4 +89,9 @@ button:hover {
   z-index: 1;
   top: 20px;
   left: 20px;
+}
+
+.separator {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
 }
