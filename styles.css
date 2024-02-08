@@ -27,16 +27,30 @@ form {
   margin-bottom: 20px;
 }
 
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  width: 120px;
+  /* Set a fixed width for all labels */
+  margin-right: 10px;
+  text-align: right;
+  /* Optional: Aligns text to the right of the label for a uniform look */
+}
+
 input,
 select {
-  width: 100%;
+  flex-grow: 1;
   padding: 10px;
-  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  /* Ensures padding does not affect overall width */
 }
+
+
 
 button {
   width: 100%;
@@ -55,31 +69,5 @@ button:hover {
 #result {
   text-align: center;
   padding: 20px;
-}
-
-/*input[type="number"] {
-  /* Existing styles for input elements */
-
-
-
-
-.form-row {
-  display: flex;
-  align-items: center;
-  /* Align items vertically */
-  margin-bottom: 10px;
-  /* Space between form rows */
-}
-
-.form-row label {
-  margin-right: 10px;
-  /* Space between label and input/select */
-  white-space: nowrap;
-  /* Prevents the label from wrapping */
-}
-
-input,
-select {
-  flex-grow: 1;
-  /* Allows inputs and selects to take up remaining space */
+  border-radius: 20;
 }
