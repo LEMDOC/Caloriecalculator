@@ -59,6 +59,27 @@ button:hover {
 
 /*input[type="number"] {
   /* Existing styles for input elements */
+
+
+
+
+.form-row {
+  display: flex;
+  align-items: center;
+  /* Align items vertically */
+  margin-bottom: 10px;
+  /* Space between form rows */
 }
 
-/*
+.form-row label {
+  margin-right: 10px;
+  /* Space between label and input/select */
+  white-space: nowrap;
+  /* Prevents the label from wrapping */
+}
+
+input,
+select {
+  flex-grow: 1;
+  /* Allows inputs and selects to take up remaining space */
+}

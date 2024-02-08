@@ -12,50 +12,65 @@
   <div class="container">
     <h1>Calorie Calculator 2</h1>
     <form id="calorieForm">
-      <!-- value="27" um Wwert festzulegen-->
-      <input type="number" id="age" placeholder="Age" name="Age" required>
-      <input type="number" id="weight" placeholder="Weight" name="weight" value="77" required>
-      <!-- Set default weight -->
-      <input type="number" id="height" placeholder="Height (cm)" name="Height" value="178" required>
-      <select id="gender" name="Gender" required>
-        <option value="" disabled selected>Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-      <input type="number" id="bodyFat" placeholder="Body Fat Percentage (optional)" step="0.01" min="0" max="100">
-
-      <!-- Adjusted Daily Activity Level Description -->
-      <select id="activityLevel" required>
-        <option value="" disabled selected>Daily Lifestyle Activity</option>
-        <option value="1.2">Sedentary: little or no movement, desk job</option>
-        <option value="1.375">Lightly active: light daily walking or physical activity</option>
-        <option value="1.55">Moderately active: constant movement during the day, retail jobs</option>
-        <option value="1.725">Very active: physically demanding jobs, active throughout the day</option>
-        <option value="1.9">Extra active: very physically demanding work and active lifestyle</option>
-      </select>
-
-      <!-- Workout Intensity Dropdown (Unchanged, for context) -->
-      <select id="workoutIntensity" required>
-        <option value="" disabled selected>Workout Intensity</option>
-        <option value="0">No workouts</option>
-        <option value="0.1">Light: 1-2 days/week</option>
-        <option value="0.2">Moderate: 3-4 days/week</option>
-        <option value="0.3">Hard: 5-6 days/week</option>
-        <option value="0.4">Very Hard: daily or intense sessions 5-6 days/week</option>
-      </select>
-
-      <!-- Persons Goal-->
-      <select id="goal">
-        <option value="" disabled selected>Your Goal</option>
-        <option value="gain">Gain Weight (Muscle)</option>
-        <option value="maintain">Maintain Weight, Lose Fat</option>
-        <option value="lose">Lose Weight (Fat)</option>
-      </select>
-
-      <!-- goal weight for gaining / losig weight-->
-      <input type="number" id="goalWeight" placeholder="Goal Weight (kg)" name="goalWeight" required>
-
-
+      <div class="form-row">
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Age" name="Age" required>
+      </div>
+      <div class="form-row">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Weight" name="weight" required>
+      </div>
+      <div class="form-row">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Height" name="Height" required>
+      </div>
+      <div class="form-row">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="Gender" required>
+          <option value="" disabled selected>Select...</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="bodyFat">Body Fat (%):</label>
+        <input type="number" id="bodyFat" placeholder="Body Fat Percentage (optional)" step="0.01" min="0" max="100">
+      </div>
+      <div class="form-row">
+        <label for="activityLevel">Activity Level:</label>
+        <select id="activityLevel" required>
+          <option value="" disabled selected>Select...</option>
+          <option value="1.2">Sedentary: little or no movement, desk job</option>
+          <option value="1.375">Lightly active: light daily walking or physical activity</option>
+          <option value="1.55">Moderately active: constant movement during the day, retail jobs</option>
+          <option value="1.725">Very active: physically demanding jobs, active throughout the day</option>
+          <option value="1.9">Extra active: very physically demanding work and active lifestyle</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="workoutIntensity">Workout Intensity:</label>
+        <select id="workoutIntensity" required>
+          <option value="" disabled selected>Select...</option>
+          <option value="0">No workouts</option>
+          <option value="0.1">Light: 1-2 days/week</option>
+          <option value="0.2">Moderate: 3-4 days/week</option>
+          <option value="0.3">Hard: 5-6 days/week</option>
+          <option value="0.4">Very Hard: daily or intense sessions 5-6 days/week</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="goal">Your Goal:</label>
+        <select id="goal" required>
+          <option value="" disabled selected>Select...</option>
+          <option value="gain">Gain Weight (Muscle)</option>
+          <option value="maintain">Maintain Weight, Lose Fat</option>
+          <option value="lose">Lose Weight (Fat)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="goalWeight">Goal Weight (kg):</label>
+        <input type="number" id="goalWeight" placeholder="Goal Weight" name="goalWeight" required>
+      </div>
       <button type="submit">Calculate</button>
     </form>
     <div id="result"></div>
@@ -64,3 +79,26 @@
 </body>
 
 </html>
+
+
+
+<!--
+
+<option value="" disabled selected>Daily Lifestyle Activity</option>
+        <option value="1.2">Sedentary: little or no movement, desk job</option>
+        <option value="1.375">Lightly active: light daily walking or physical activity</option>
+        <option value="1.55">Moderately active: constant movement during the day, retail jobs</option>
+        <option value="1.725">Very active: physically demanding jobs, active throughout the day</option>
+        <option value="1.9">Extra active: very physically demanding work and active lifestyle</option>
+      </select>
+
+<select id="workoutIntensity" required>
+  <option value="" disabled selected>Workout Intensity</option>
+  <option value="0">No workouts</option>
+  <option value="0.1">Light: 1-2 days/week</option>
+  <option value="0.2">Moderate: 3-4 days/week</option>
+  <option value="0.3">Hard: 5-6 days/week</option>
+  <option value="0.4">Very Hard: daily or intense sessions 5-6 days/week</option>
+
+
+  -->
