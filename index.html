@@ -12,7 +12,8 @@
   <div class="container">
     <h1>Calorie Calculator 2</h1>
     <form id="calorieForm">
-      <input type="number" id="age" placeholder="Age" name="Age" value="27" required>
+      <!-- value="27" um Wwert festzulegen-->
+      <input type="number" id="age" placeholder="Age" name="Age" required>
       <input type="number" id="weight" placeholder="Weight" name="weight" value="77" required>
       <!-- Set default weight -->
       <input type="number" id="height" placeholder="Height (cm)" name="Height" value="178" required>
@@ -21,6 +22,8 @@
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
+      <input type="number" id="bodyFat" placeholder="Body Fat Percentage (optional)" step="0.01" min="0" max="100">
+
       <!-- Adjusted Daily Activity Level Description -->
       <select id="activityLevel" required>
         <option value="" disabled selected>Daily Lifestyle Activity</option>
@@ -40,6 +43,18 @@
         <option value="0.3">Hard: 5-6 days/week</option>
         <option value="0.4">Very Hard: daily or intense sessions 5-6 days/week</option>
       </select>
+
+      <!-- Persons Goal-->
+      <select id="goal">
+        <option value="" disabled selected>Your Goal</option>
+        <option value="gain">Gain Weight (Muscle)</option>
+        <option value="maintain">Maintain Weight, Lose Fat</option>
+        <option value="lose">Lose Weight (Fat)</option>
+      </select>
+
+      <!-- goal weight for gaining / losig weight-->
+      <input type="number" id="goalWeight" placeholder="Goal Weight (kg)" name="goalWeight" required>
+
 
       <button type="submit">Calculate</button>
     </form>
